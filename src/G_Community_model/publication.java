@@ -1,8 +1,12 @@
-package model;
+package G_Community_model;
+
+import java.util.Date;
 
 public class publication {
+
     private int id_pub;
     private int reactions;
+    private Date date_pub;
     private int nbre_commentaire;
     private String topic;
     private int id_u;
@@ -11,7 +15,7 @@ public class publication {
     public publication() {
     }
 
-    //constuctor with params without ID_pub
+    //constuctor with params without ID_pub&user
     public publication(int reactions, int nbre_commentaire, String topic) {
         this.reactions = reactions;
         this.nbre_commentaire = nbre_commentaire;
@@ -59,17 +63,21 @@ public class publication {
         this.id_u = id_u;
     }
 
-    //toString
-    @Override
-    public String toString() {
-        return "{" +
-            " id_pub='" + getId_pub() + "'" +
-            ", reactions='" + getReactions() + "'" +
-            ", nbre_commentaire='" + getNbre_commentaire() + "'" +
-            ", topic='" + getTopic() + "'" +
-            ", id_u='" + getId_u() + "'" +
-            "}";
+    public Date getDate_pub() {
+        return date_pub;
     }
 
+    public void setDate_pub(Date date_pub) {
+        this.date_pub = date_pub;
+    }
+    
+
+    //toString
+
+    @Override
+    public String toString() {
+        return "publication{" + "id_pub=" + id_pub + ", reactions=" + reactions + ", ddate_pub=" + date_pub + ", nbre_commentaire=" + nbre_commentaire + ", topic=" + topic + ", id_u=" + id_u + '}';
+    }
+   
 
 }
