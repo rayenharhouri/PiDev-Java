@@ -16,8 +16,15 @@ import G_Community_model.publication;
 public interface IpublicationService {
     
     //Add Pub
-    public void ajouterPublication(publication p);
+    public void ajouterPublication(publication p,int id_user);
 
     //Show Pubs
-    public List<publication> afficherPubs();
+    public List<String> afficherPubs();
+    
+    //delete pub
+    public void deletePub(int id);
+    
+    //Modify pub
+    public void modifyPub(int id,String topic);
+    
 }
