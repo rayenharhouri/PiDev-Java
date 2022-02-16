@@ -12,16 +12,19 @@ import java.util.List;
  *
  * @author MSI
  */
-public interface IcommentaireService {
+public interface ICommentaireService {
       //Add comment
     public void addComment(commentaire c,int id_user,int id_pub);
 
     //Show comment
-    public List<String> showComments(int id_Pub);
+    public List<commentaire> showComments(int id_Pub);
     
     //delete comment
-    public void deleteComment(int id_Comment);
+    public void deleteComment(int id_Comment,int id_pub);
     
     //Modify comment
-    public void modifyComment(int id,String Comment);  
+    public void modifyComment(int id,String Comment);
+    
+    //Voir tous les commentaire Sur une Pub
+    public void ShowCommentsAdvanced(int id_pub);
 }

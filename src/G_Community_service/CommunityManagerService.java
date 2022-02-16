@@ -5,7 +5,6 @@
  */
 package G_Community_service;
 
-import G_Community_interface.IcommunityManagerService;
 import G_Community_model.CommunityManager;
 import G_Community_util.Connexion;
 import java.sql.Connection;
@@ -14,33 +13,18 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import G_Community_interface.ICommunityManagerService;
 
 /**
  *
  * @author MSI
  */
-public class CommunityManagerService implements IcommunityManagerService {
+public class CommunityManagerService implements ICommunityManagerService {
 
     //var
     Connection cnx = Connexion.getInstance().getCnx();
 
-    @Override
-    public List<String> showCM(int id_cm) {
-        List<String> data = new ArrayList<>();
-        String query = "SELECT * FROM `community_manager` WHERE id_CM="+id_cm;
-        try {
-            Statement st = cnx.createStatement();
-            ResultSet rs = st.executeQuery(query);
-            while (rs.next()) {
-                String result = "ID_CM : " + rs.getInt(1) + " NOM & PRENOM : " + rs.getString(2) + " Mail : " + rs.getString(3);
-                data.add(result);
-            }
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-        System.out.println(data);
-        return data;
-    }
+
 
     @Override
     public void deleteCM(int id_cm) {
@@ -78,6 +62,24 @@ public class CommunityManagerService implements IcommunityManagerService {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+        @Override
+    public List<CommunityManager> showCM(int id_cm) {
+        List<CommunityManager> data = new ArrayList<>();
+        String query = "SELECT * FROM `community_manager` WHERE id_CM="+id_cm;
+        try {
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                data.add(new CommunityManager(rs.getInt(1), rs.getString(2),rs.getString(3),rs.getString(3)));
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+            System.out.println("CM :");
+        System.out.println(data);
+        return data;
     }
 
 }

@@ -12,12 +12,20 @@ package G_Community_model;
 public class annonce {
     private int id_annonce;
     private String annonce;
+    private int id_CM;
     
     public annonce() {
     }
 
-    public annonce(String annonce) {
+    public annonce(String annonce ,int id_CM) {
         this.annonce = annonce;
+        this.id_CM = id_CM;
+    }
+
+    public annonce(int id_annonce, String annonce,int id_CM) {
+        this.id_annonce = id_annonce;
+        this.annonce = annonce;
+        this.id_CM = id_CM;
     }
 
     public String getAnnonce() {
@@ -28,9 +36,26 @@ public class annonce {
         this.annonce = annonce;
     }
 
+    public int getId_annonce() {
+        return id_annonce;
+    }
+
+    public void setId_annonce(int id_annonce) {
+        this.id_annonce = id_annonce;
+    }
+
+    public int getId_CM() {
+        return id_CM;
+    }
+
+    public void setId_CM(int id_CM) {
+        this.id_CM = id_CM;
+    }
+    
+
     @Override
     public String toString() {
-        return "annonce{" + "id_annonce=" + id_annonce + ", annonce=" + annonce + '}';
+        return "annonce{" + "\n Id_annonce= " + id_annonce + "\n Annonce=" + annonce + "\n ID_CM=" + id_CM + "\n}";
     }
     
     

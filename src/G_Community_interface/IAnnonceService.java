@@ -13,12 +13,12 @@ import java.util.List;
  *
  * @author MSI
  */
-public interface IannonceService {
+public interface IAnnonceService {
           //Add Pub
     public void addAnnonce(annonce a,int id_CM);
 
     //Show Pubs
-    public List<String> showAnnonce(int id_annonce);
+    public List<annonce> showAnnonce(int id_annonce);
     
     //delete pub
     public void deleteAnnonce(int id_annonce);

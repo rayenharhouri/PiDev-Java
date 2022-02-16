@@ -18,6 +18,13 @@ public class CommunityManager {
     public CommunityManager() {
     }
 
+    public CommunityManager(int id_cm, String nom_prenom, String mail, String pwd) {
+        this.id_cm = id_cm;
+        this.nom_prenom = nom_prenom;
+        this.mail = mail;
+        this.pwd = pwd;
+    }
+    
     public CommunityManager( String nom_prenom, String mail, String pwd) {
         this.nom_prenom = nom_prenom;
         this.mail = mail;

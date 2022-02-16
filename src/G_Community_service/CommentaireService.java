@@ -5,7 +5,6 @@
  */
 package G_Community_service;
 
-import G_Community_interface.IcommentaireService;
 import G_Community_model.commentaire;
 import G_Community_util.Connexion;
 import java.sql.Connection;
@@ -14,19 +13,20 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
+import G_Community_interface.ICommentaireService;
+import G_Community_model.publication;
 
 /**
  *
  * @author MSI
  */
-public class CommentaireService implements IcommentaireService {
+public class CommentaireService implements ICommentaireService {
 
     //var
     Connection cnx = Connexion.getInstance().getCnx();
 
     @Override
-    public void addComment(commentaire c, int id_pub , int id_user) { 
+    public void addComment(commentaire c, int id_pub, int id_user) {
         //req
         String query = "INSERT INTO `commentaire`( `comment`,`id_u`,`id_pub`) VALUES ('" + c.getCommentaire() + "','" + id_user + "','" + id_pub + "')";
         try {
@@ -38,32 +38,44 @@ public class CommentaireService implements IcommentaireService {
             ex.printStackTrace();
         }
 
+        String queryy = "UPDATE `publication` AS T1,"
+                + "      (SELECT `nbre_commentaires`"
+                + "        FROM `publication` "
+                + "        WHERE id_pub = " + id_pub + ") AS T2 "
+                + "  SET T1.`nbre_commentaires`=T2.`nbre_commentaires` + 1 "
+                + "WHERE T1.id_pub =" + id_pub;
+
+        try {
+            Statement st = cnx.createStatement();
+            st.executeUpdate(queryy);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
-    public List<String> showComments(int id_Pub) {
-        List<String> data = new ArrayList<>();
-        String query="SELECT * FROM `commentaire` WHERE id_pub="+id_Pub;
+    public List<commentaire> showComments(int id_Pub) {
+        List<commentaire> data = new ArrayList<>();
+        String query = "SELECT * FROM `commentaire` WHERE id_pub=" + id_Pub;
         Statement st;
         try {
             st = cnx.createStatement();
-            ResultSet rs= st.executeQuery(query);
-            while(rs.next()){
-                String result = "ID_Commentaire : " + rs.getInt(1) + "\nID_USER : " + rs.getInt(3) + "\nCOMMENT :" + rs.getString(4);
-                data.add(result);
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                data.add(new commentaire(rs.getInt(1), rs.getInt(3), rs.getInt(2), rs.getString(4)));
             }
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-        
+        System.out.println("COMMENTAIRE :");
         System.out.println(data);
         return data;
     }
 
     @Override
-    public void deleteComment(int id_Comment) {
+    public void deleteComment(int id_Comment,int id_pub) {
         //req
-        String query="DELETE FROM `commentaire` WHERE id_commentaire="+id_Comment;
+        String query = "DELETE FROM `commentaire` WHERE id_commentaire=" + id_Comment;
         try {
             Statement st = cnx.createStatement();
             st.executeUpdate(query);
@@ -71,18 +83,57 @@ public class CommentaireService implements IcommentaireService {
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
+        String queryy = "UPDATE `publication` AS T1,"
+                + "      (SELECT `nbre_commentaires`"
+                + "        FROM `publication` "
+                + "        WHERE id_pub = " + id_pub + ") AS T2 "
+                + "  SET T1.`nbre_commentaires`=T2.`nbre_commentaires` - 1 "
+                + "WHERE T1.id_pub =" + id_pub;
+        try {
+            Statement st = cnx.createStatement();
+            st.executeUpdate(queryy);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void modifyComment(int id_comment, String Comment) {
-        String query= "UPDATE `commentaire` SET `comment`='"+Comment+"' WHERE id_commentaire="+id_comment;
+        String query = "UPDATE `commentaire` SET `comment`='" + Comment + "' WHERE id_commentaire=" + id_comment;
         try {
             Statement st = cnx.createStatement();
             st.executeUpdate(query);
             System.out.println("Modify Done !!");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void ShowCommentsAdvanced(int id_pub) {
+        String query = "SELECT `comment` FROM `commentaire` WHERE id_pub=" + id_pub;
+        String query1 = "SELECT `topic` FROM `publication` WHERE id_pub=" + id_pub;
+        String pub = "";
+        List<String> data = new ArrayList<>();
+        try {
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                data.add(rs.getString(1));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(query1);
+            rs.first();
+            pub = rs.getString(1);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println("#" + pub + "# ID_PUB = " + id_pub + "\nComments : " + data);
     }
 
 }

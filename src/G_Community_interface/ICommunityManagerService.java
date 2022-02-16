@@ -12,12 +12,12 @@ import java.util.List;
  *
  * @author MSI
  */
-public interface IcommunityManagerService {
+public interface ICommunityManagerService {
           //Add comment
     public void addCM(CommunityManager cm);
 
     //Show comment
-    public List<String> showCM(int id_cm);
+    public List<CommunityManager> showCM(int id_cm);
     
     //delete comment
     public void deleteCM(int id_cm);

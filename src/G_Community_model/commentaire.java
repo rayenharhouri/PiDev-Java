@@ -21,6 +21,14 @@ public class commentaire {
     public commentaire() {
     }
 
+    public commentaire(int id_commentaire, int id_user, int id_pub, String commentaire) {
+        this.id_commentaire = id_commentaire;
+        this.id_user = id_user;
+        this.id_pub = id_pub;
+        this.commentaire = commentaire;
+    }
+    
+
     public commentaire(String commentaire) {
         this.commentaire = commentaire;
     }

@@ -22,6 +22,16 @@ public class publication {
         this.topic = topic;
     }
 
+    public publication(int id_pub, int reactions, Date date_pub, int nbre_commentaire, String topic, int id_u) {
+        this.id_pub = id_pub;
+        this.reactions = reactions;
+        this.date_pub = date_pub;
+        this.nbre_commentaire = nbre_commentaire;
+        this.topic = topic;
+        this.id_u = id_u;
+    }
+    
+
     //getters and setters
     public int getId_pub() {
         return this.id_pub;
@@ -76,7 +86,7 @@ public class publication {
 
     @Override
     public String toString() {
-        return "publication{" + "id_pub=" + id_pub + ", reactions=" + reactions + ", ddate_pub=" + date_pub + ", nbre_commentaire=" + nbre_commentaire + ", topic=" + topic + ", id_u=" + id_u + '}';
+        return "publication{" + "id_pub=" + id_pub + ", reactions=" + reactions + ", date_pub=" + date_pub + ", nbre_commentaire=" + nbre_commentaire + ", topic=" + topic + ", id_u=" + id_u + "}\n";
     }
    
 

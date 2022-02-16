@@ -13,18 +13,22 @@ import G_Community_model.publication;
  *  
  * @author MSI
  */
-public interface IpublicationService {
+public interface IPublicationService {
     
     //Add Pub
     public void ajouterPublication(publication p,int id_user);
 
     //Show Pubs
-    public List<String> afficherPubs();
+    public List<publication> afficherPubs();
     
     //delete pub
     public void deletePub(int id);
     
     //Modify pub
     public void modifyPub(int id,String topic);
+    
+    
+    //Calculer Nombre de publication par utilisateur
+    public int CountUserPub(int id_user);
     
 }

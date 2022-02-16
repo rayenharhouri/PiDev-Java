@@ -5,7 +5,6 @@
  */
 package G_Community_service;
 
-import G_Community_interface.IannonceService;
 import G_Community_model.annonce;
 import G_Community_util.Connexion;
 import java.sql.Connection;
@@ -16,12 +15,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import G_Community_interface.IAnnonceService;
 
 /**
  *
  * @author MSI
  */
-public class AnnonceService implements IannonceService {
+public class AnnonceService implements IAnnonceService {
 
     Connection cnx = Connexion.getInstance().getCnx();
 
@@ -39,19 +39,19 @@ public class AnnonceService implements IannonceService {
     }
 
     @Override
-    public List<String> showAnnonce(int id_annonce) {
+    public List<annonce> showAnnonce(int id_annonce) {
         String query = "SELECT * FROM `annonce` WHERE id_annonce="+id_annonce;
-        List<String> data = new ArrayList<String>();
+        List<annonce> data = new ArrayList<>();
         try {
             Statement st = cnx.createStatement();
             ResultSet rs = st.executeQuery(query);
             while(rs.next()) {
-                String result = "ID_ANNONCE : "+rs.getInt(1) +"\nID_CM : "+ rs.getInt(2) +"\nANNONCE : " + rs.getString(3) ;
-                data.add(result);
+                data.add(new annonce(rs.getInt(1),rs.getString(3),rs.getInt(2)));
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println("ANNONCE :");
         System.out.println(data);
         return data;
     }
