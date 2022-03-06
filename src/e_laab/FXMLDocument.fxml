@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="vbox" prefHeight="450.0" prefWidth="600.0" stylesheets="@css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="e_laab.FXMLDocumentController">
+   <children>
+      <VBox layoutX="62.0" layoutY="27.0" prefHeight="249.0" prefWidth="228.0" spacing="30.0">
+         <children>
+            <TextField fx:id="tfid" text="5" />
+            <TextField fx:id="tfimage" text="hhhh" />
+            <TextField fx:id="tfqm" text="1" />
+            <TextField fx:id="tftheme" text="math" />
+            <TextField fx:id="tfdifficulte" text="facile" />
+            <TextField fx:id="tfresultat" text="3" />
+         </children>
+      </VBox>
+      <VBox layoutX="8.0" layoutY="26.0" prefHeight="300.0" prefWidth="66.0" spacing="40.0">
+         <children>
+            <Label text="id_quizz" textFill="RED" />
+            <Label text="image" textFill="RED" />
+            <Label text="id_qm" textFill="RED" />
+            <Label text="theme" textFill="RED" />
+            <Label text="difficulte" textFill="RED" />
+            <Label text="resultat" textFill="RED" />
+         </children>
+      </VBox>
+      <ListView fx:id="listView" layoutX="300.0" layoutY="14.0" prefHeight="300.0" prefWidth="293.0" stylesheets="@css.css" />
+      <Button layoutX="215.0" layoutY="357.0" mnemonicParsing="false" onAction="#modifierQuiz" text="modifier" textFill="#ab35aa" />
+      <Button layoutX="516.0" layoutY="417.0" mnemonicParsing="false" onAction="#supprimerQuiz" text="supprimer" textFill="RED" />
+      <Button layoutX="400.0" layoutY="357.0" mnemonicParsing="false" onAction="#afficher" prefHeight="25.0" prefWidth="54.0" text="afficher" textFill="#1b1c16" />
+      <Button layoutX="48.0" layoutY="357.0" mnemonicParsing="false" text="Ajouter" />
+   </children>
+</AnchorPane>

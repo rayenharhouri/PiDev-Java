@@ -1,0 +1,50 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22 févr. 2022, 15:13:31
+    Author     : Rayen
+*/
+
+/*.parent{
+    -fx-background-color: transparent;
+}
+.pane{
+   -fx-background-color: #ff0000; 
+}
+.trans-btn-white-border{
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-text-fill: whitesmoke;
+}
+.white-pane{
+    -fx-background-color: #83f52c;
+}
+.blue-panel{
+    -fx-background-color: #151928;
+}
+.tf_box{
+    -fx-background-color: transparent;
+    -fx-border-color: #DEDEE4;
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-prompt-text-fill:rgb(255, 255, 255);
+}
+.tf{
+    -fx-background-color: transparent;    
+}
+.blue-btn:hover{
+    -fx-background-color: #ff0000;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #fffff;
+}
+.transparent-btn{
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #fffff;
+}
+*/
