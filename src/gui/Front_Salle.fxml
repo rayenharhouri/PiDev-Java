@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Front_SalleCrontroller">
+   <children>
+      <AnchorPane prefHeight="616.0" prefWidth="993.0" style="-fx-background-color: #030307; -fx-background-radius: 15;">
+         <children>
+            <StackPane layoutX="73.0" prefHeight="616.0" prefWidth="919.0">
+               <children>
+                  <Pane fx:id="pnl_salle" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #707069;">
+                     <children>
+                        <AnchorPane layoutX="25.0" layoutY="62.0" prefHeight="531.0" prefWidth="886.0" style="-fx-background-color: #707070; -fx-background-radius: 10;" stylesheets="@../css/fullpackstyling2.css">
+                           <children>
+                              <ScrollPane fx:id="scrollpane_Salle" layoutX="7.0" layoutY="47.0" prefHeight="484.0" prefWidth="880.0" style="-fx-background-color: #131022;">
+                                 <content>
+                                    <HBox fx:id="hbox_salle" prefHeight="482.0" prefWidth="886.0" style="-fx-border-color: FFF; -fx-background-color: FFF;" stylesheets="@../css/fullpackstyling2.css" />
+                                 </content>
+                              </ScrollPane>
+                              <Label layoutX="45.0" layoutY="11.0" text="Consulter" textFill="#251919">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="190.0" layoutY="11.0" text="Salles">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="26.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+            <VBox prefHeight="544.0" prefWidth="74.0" style="-fx-background-color: #131022; -fx-background-radius: 15 0 0 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="btn_Salle" contentDisplay="TOP" layoutX="10.0" layoutY="76.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="66.0" prefWidth="74.0" style="-fx-background-color: #48ffc2;" stylesheets="@../css/style%20-%20Copie.css" text="back" textFill="#a868a0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/food-and-restaurant.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <Label fx:id="username" layoutX="700.0" layoutY="20.0" prefHeight="27.0" prefWidth="149.0" text="Client">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

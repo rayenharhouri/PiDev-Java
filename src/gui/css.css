@@ -1,0 +1,68 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22 févr. 2022, 15:13:31
+    Author     : melek
+*/
+
+.parent{
+    -fx-background-color: transparent;
+}
+.pane{
+   -fx-background-color: #000000;
+   
+}
+.trans-btn-white-border{
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-text-fill: white;
+}
+.white-pane{
+    -fx-background-color: #105b83;
+     -fx-text-fill: white;
+}
+.blue-panel{
+    -fx-background-color: #11053f;
+    -fx-text_fill: white;
+}
+.tf_box{
+    -fx-background-color: transparent;
+    -fx-border-color: #DADCDB;
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-prompt-text-fill:rgb(255, 255, 255);
+    -fx-text-fill: white;
+}
+.tf{
+    -fx-background-color: transparent;    
+    -fx-text-fill:white;
+}
+.blue-btn:hover{
+    -fx-background-color: #ff0000;
+    -fx-background-radius: 5px;
+    
+    -fx-text-fill:white;
+}
+
+.back{
+    -fx-background-image:url('cc.png');
+    -fx-background-size:cover;
+    
+}
+
+
+.transparent-btn{
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+    -fx-text-fill: white;
+}
+.text_fill{
+    
+    -fx-text_fill: white;
+}
+

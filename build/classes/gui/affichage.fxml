@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane fx:id="affiche" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="584.0" prefWidth="898.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.affichagecontroller">
+  <tabs>
+    <Tab text="gestion utilisateur">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #11053f;">
+               <children>
+                  <Button layoutX="692.0" layoutY="203.0" mnemonicParsing="false" onAction="#afficher" prefHeight="26.0" prefWidth="89.0" style="-fx-background-color: #48ffc2;" text="afficher" />
+                  <Button layoutX="794.0" layoutY="203.0" mnemonicParsing="false" onAction="#trier" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #48ffc2;" text="trier" />
+                  <ListView fx:id="affichage" layoutX="21.0" layoutY="245.0" prefHeight="266.0" prefWidth="862.0" />
+                  <TextField fx:id="cherche" layoutX="55.0" layoutY="154.0" promptText="right_here" style="-fx-border-color: #48ffc2;" />
+                  <TextField fx:id="tfidsupprim" layoutX="261.0" layoutY="154.0" promptText="id_utilisateur" style="-fx-border-color: #48ffc2;" />
+                  <Button layoutX="92.0" layoutY="191.0" mnemonicParsing="false" onAction="#chercher" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #48ffc2;" text="chercher" />
+                  <Button layoutX="288.0" layoutY="191.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="26.0" prefWidth="95.0" style="-fx-background-color: #48ffc2;" text="supprimer" />
+                  <Button layoutX="721.0" layoutY="22.0" mnemonicParsing="false" onAction="#gestionquiz" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #48ffc2;" text="gerer quizs" />
+                  <Button layoutX="721.0" layoutY="60.0" mnemonicParsing="false" onAction="#loadAdmin" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #48ffc2;" text="GERER FORUM" />
+                  <Button layoutX="723.0" layoutY="98.0" mnemonicParsing="false" onAction="#gerer_tournoi" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: #48ffc2;" text="gerer tournois" />
+                  <Button layoutX="564.0" layoutY="23.0" mnemonicParsing="false" onAction="#commande" prefHeight="26.0" prefWidth="139.0" style="-fx-background-color: #48ffc2;" text="commande _facture" />
+                  <Button layoutX="566.0" layoutY="61.0" mnemonicParsing="false" onAction="#produits_back" prefHeight="26.0" prefWidth="142.0" text="produits" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="gestion equipe">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #11053f;">
+               <children>
+                  <ListView fx:id="affichage_e" layoutX="33.0" layoutY="323.0" prefHeight="200.0" prefWidth="817.0" />
+                  <Button layoutX="744.0" layoutY="289.0" mnemonicParsing="false" onAction="#trier_e" prefHeight="26.0" prefWidth="89.0" style="-fx-background-color: #48ffc2;" text="trier" />
+                  <Button layoutX="636.0" layoutY="289.0" mnemonicParsing="false" onAction="#afficher_e" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: #48ffc2;" text="afficher" />
+                  <Button layoutX="63.0" layoutY="276.0" mnemonicParsing="false" onAction="#chercher_e" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #48ffc2;" text="chercher" />
+                  <Button layoutX="229.0" layoutY="276.0" mnemonicParsing="false" onAction="#supprimer_e" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #48ffc2;" text="supprimer" />
+                  <TextField fx:id="tf_chercher_e" layoutX="31.0" layoutY="236.0" style="-fx-border-color: #48ffc2;" />
+                  <TextField fx:id="tf_supprim_e" layoutX="200.0" layoutY="236.0" style="-fx-border-color: #48ffc2;" />
+                  <Button layoutX="825.0" layoutY="24.0" mnemonicParsing="false" onAction="#exit" prefHeight="26.0" prefWidth="59.0" style="-fx-background-color: #48ffc2;" text="exit" />
+                  <Button layoutX="516.0" layoutY="289.0" mnemonicParsing="false" onAction="#actualiser" prefHeight="26.0" prefWidth="95.0" style="-fx-background-color: #48ffc2;" text="actualiser" />
+                  <TextField fx:id="titres" layoutX="63.0" layoutY="64.0" promptText="titres" style="-fx-border-color: #48ffc2;" />
+                  <Button layoutX="284.0" layoutY="64.0" mnemonicParsing="false" onAction="#modifier_e" prefHeight="26.0" prefWidth="93.0" style="-fx-background-color: #48ffc2;" text="modifier" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

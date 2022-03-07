@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="itemC" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="325.0" spacing="80.0" style="-fx-background-color: #131022; -fx-background-insets: 0;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Item_tournoiController">
+    <children>
+      <Pane prefHeight="461.0" prefWidth="325.0" style="-fx-background-color: fff; -fx-background-radius: 15;">
+         <children>
+            <Label layoutX="46.0" layoutY="210.0" text="nombre equipe">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="nbr_eqp" layoutX="157.0" layoutY="208.0" prefHeight="17.0" prefWidth="84.0" text="Categorie">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="date" layoutX="47.0" layoutY="251.0" prefHeight="27.0" prefWidth="38.0" text="Date">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="date" layoutX="157.0" layoutY="253.0" prefHeight="17.0" prefWidth="84.0" text="Categorie">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="libelle" layoutX="101.0" layoutY="32.0" text="Tournoi">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_prix" layoutX="46.0" layoutY="388.0" text="PRIX" textFill="#48ffc2">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="prix" layoutX="150.0" layoutY="388.0" text="150 DT">
+               <font>
+                  <Font name="Montserrat SemiBold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="278.0" prefHeight="27.0" prefWidth="38.0" text="Type">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="type" layoutX="154.0" layoutY="285.0" prefHeight="17.0" prefWidth="84.0" text="Categorie">
+               <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+    </children>
+    <effect>
+        <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+    </effect>
+</HBox>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.back_controller">
+   <children>
+      <StackPane layoutX="238.0" layoutY="-1.0" prefHeight="602.0" prefWidth="564.0">
+         <children>
+            <Pane fx:id="pnFournisseur" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <TableView fx:id="tvFournisseur" layoutX="33.0" layoutY="152.0" onMouseClicked="#fnSelectedFour" prefHeight="242.0" prefWidth="416.0" style="-fx-background-color: #fff; -fx-border-color: #f0ad4e;">
+                     <columns>
+                        <TableColumn fx:id="colNom" prefWidth="255.20001220703125" text="Nom" />
+                        <TableColumn fx:id="colNum" prefWidth="159.20001220703125" text="Numero" />
+                     </columns>
+                  </TableView>
+                  <HBox layoutX="61.0" layoutY="404.0" prefHeight="84.0" prefWidth="360.0" spacing="20.0">
+                     <children>
+                        <VBox prefHeight="84.0" prefWidth="202.0">
+                           <children>
+                              <Label prefHeight="36.0" prefWidth="57.0" text="Nom:">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tfNom" prefHeight="27.0" prefWidth="139.0" promptText="Nom fournisseur" style="-fx-background-color: #fff; -fx-border-color: #f0ad4e;" styleClass="combo-box" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="84.0" prefWidth="130.0">
+                           <children>
+                              <Label prefHeight="36.0" prefWidth="103.0" text="Numero:">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tfNum" prefHeight="27.0" prefWidth="108.0" promptText="Numero Fournisseur" style="-fx-background-color: #fff; -fx-border-color: #f0ad4e;" styleClass="combo-box" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="14.0" layoutY="488.0" prefHeight="100.0" prefWidth="481.0" spacing="30.0">
+                     <children>
+                        <Button fx:id="bntAjoutFour" mnemonicParsing="false" onAction="#fnAjoutFour" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color:  #48ffc2;; -fx-background-radius: 200;" text="Ajouter" textFill="WHITE">
+                           <font>
+                              <Font name="Raleway ExtraBold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnModifFour" mnemonicParsing="false" onAction="#fnModifFour" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color: #48ffc2; -fx-background-radius: 200;" text="Modifier" textFill="WHITE">
+                           <font>
+                              <Font name="Raleway ExtraBold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnSuppFour" mnemonicParsing="false" onAction="#fnSuppFour" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color: #48ffc2; -fx-background-radius: 200;" text="Supprimer" textFill="WHITE">
+                           <font>
+                              <Font name="Raleway ExtraBold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="tfSearchFour" layoutX="411.0" layoutY="25.0" prefHeight="27.0" prefWidth="125.0" promptText="search" style="-fx-border-color: #64c3c2; -fx-border-radius: 200; -fx-background-radius: 200;" />
+                  <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="514.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Search_52px.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lbIdFour" layoutX="87.0" layoutY="65.0" visible="false" />
+                  <Button fx:id="btnPDF" layoutX="421.0" layoutY="439.0" mnemonicParsing="false" onAction="#fnPDF" prefHeight="27.0" prefWidth="130.0" style="-fx-background-color: #48ffc2; -fx-background-radius: 200;" text="Gener PDF produit" textFill="WHITE">
+                     <font>
+                        <Font name="Raleway ExtraBold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="pnProduit" prefHeight="602.0" prefWidth="470.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <TextField fx:id="tfSearch" layoutX="371.0" layoutY="29.0" prefHeight="27.0" prefWidth="125.0" promptText="search" style="-fx-border-color: #64c3c2; -fx-border-radius: 200; -fx-background-radius: 200;" />
+                  <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="472.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Search_52px.png" />
+                     </image>
+                  </ImageView>
+                  <TableView fx:id="tvProduit" layoutX="14.0" layoutY="136.0" onMouseClicked="#fnSelected" prefHeight="242.0" prefWidth="416.0" style="-fx-background-color: #fff; -fx-border-color: #f0ad4e;">
+                     <columns>
+                        <TableColumn fx:id="colType" prefWidth="75.0" text="Type" />
+                        <TableColumn fx:id="colQuantity" prefWidth="104.79998779296875" text="Quantity" />
+                        <TableColumn fx:id="colPrix" prefWidth="90.39996337890625" text="Prix" />
+                        <TableColumn fx:id="colFrounisseur" prefWidth="144.0" text="Fournisseur" />
+                     </columns>
+                  </TableView>
+                  <Label fx:id="lbIdFournisseur" layoutX="127.0" layoutY="75.0" visible="false" />
+                  <Label fx:id="lbidProduit" layoutX="268.0" layoutY="56.0" visible="false" />
+                  <HBox layoutX="14.0" layoutY="404.0" prefHeight="84.0" prefWidth="514.0" spacing="20.0">
+                     <children>
+                        <VBox prefHeight="91.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="36.0" prefWidth="57.0" text="Type :">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tfType" prefHeight="27.0" prefWidth="139.0" promptText="Type produit" style="-fx-background-color: #fff; -fx-border-color: #f0ad4e;" styleClass="combo-box" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="159.0" prefWidth="106.0">
+                           <children>
+                              <Label prefHeight="36.0" prefWidth="103.0" text="Quantity:">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tfQuantity" prefHeight="27.0" prefWidth="108.0" promptText="Quantity produit" style="-fx-background-color: #fff; -fx-border-color: #f0ad4e;" styleClass="combo-box" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="159.0" prefWidth="106.0">
+                           <children>
+                              <Label prefHeight="36.0" prefWidth="103.0" text="Prix:">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tfPrix" prefHeight="27.0" prefWidth="108.0" promptText="Prix produit" style="-fx-background-color: #fff; -fx-border-color: #f0ad4e;" styleClass="combo-box" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="159.0" prefWidth="106.0">
+                           <children>
+                              <Label prefHeight="36.0" prefWidth="103.0" text="Fournisseur:">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="ComboFournisseur" prefWidth="150.0" promptText="Fournisseur" style="-fx-background-color: #fff; -fx-border-color: #f0ad4e;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="14.0" layoutY="480.0" prefHeight="100.0" prefWidth="481.0" spacing="30.0">
+                     <children>
+                        <Button fx:id="bntAjout" mnemonicParsing="false" onAction="#fnAjout" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color:  #48ffc2; -fx-background-radius: 200;" text="Ajouter" textFill="WHITE">
+                           <font>
+                              <Font name="Raleway ExtraBold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnModif" mnemonicParsing="false" onAction="#fnModif" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color:  #48ffc2; -fx-background-radius: 200;" text="Modifier" textFill="WHITE">
+                           <font>
+                              <Font name="Raleway ExtraBold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnSupp" mnemonicParsing="false" onAction="#fnSupp" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color:  #48ffc2; -fx-background-radius: 200;" text="Supprimer" textFill="WHITE">
+                           <font>
+                              <Font name="Raleway ExtraBold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label fx:id="lbIdProd" visible="false" />
+                  <Label layoutX="487.0" layoutY="235.0" text="IMAGE" textFill="#555555">
+                     <font>
+                        <Font name="Raleway Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imageview" fitHeight="70.0" fitWidth="78.0" layoutX="470.0" layoutY="261.0" onDragDropped="#handleDrop" onDragOver="#handleDragOver" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/upload.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+      <VBox layoutX="36.0" layoutY="190.0" prefHeight="216.0" prefWidth="205.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="38.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Box_32px.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label fx:id="lbProduit" alignment="BOTTOM_CENTER" contentDisplay="CENTER" onMouseClicked="#fnProduit" prefHeight="72.0" prefWidth="172.0" text="produits" textFill="#8e8989">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Home_32px.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label fx:id="lbFournisseur" alignment="BOTTOM_CENTER" onMouseClicked="#fnFournisseur" prefHeight="118.0" prefWidth="203.0" text="fournisseurs" textFill="#8e8989">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="42.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Sign_Out_32px.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label fx:id="lbRetour" alignment="BOTTOM_CENTER" onMouseClicked="#fnRetour" prefHeight="118.0" prefWidth="203.0" text="Retour" textFill="#8e8989">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

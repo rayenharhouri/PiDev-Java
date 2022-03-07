@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="611.0" prefWidth="764.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FXML2Controller">
+   <children>
+      <StackPane layoutX="146.0" prefHeight="611.0" prefWidth="610.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Pane prefHeight="582.0" prefWidth="548.0" style="-fx-background-color: #707070;">
+               <children>
+                  <ListView fx:id="lvcommande" layoutX="242.0" layoutY="117.0" onMouseClicked="#index" prefHeight="296.0" prefWidth="361.0" />
+                  <TextField fx:id="erreur" layoutX="480.0" layoutY="81.0" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #ffffff; -fx-border-color: #48ffc2;" />
+                  <HBox layoutX="14.0" layoutY="195.0" prefHeight="39.0" prefWidth="223.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="89.0" text=" Quantité :" />
+                        <TextField fx:id="tfquantite" promptText="Quantité" style="-fx-border-color: #48ffc2; -fx-background-color: #ffffff;" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="42.0" layoutY="438.0" prefHeight="100.0" prefWidth="478.0" spacing="40.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#btnAjouter" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #48ffc2; -fx-background-radius: 200;" text="Ajouter" textFill="#fcf7f7">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#btnSuprimer" prefHeight="30.0" prefWidth="82.0" style="-fx-background-color: #48ffc2; -fx-background-radius: 200;" text="Suprimer" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#btnModifier" onMouseClicked="#index" prefHeight="30.0" prefWidth="81.0" style="-fx-background-color: #48ffc2; -fx-background-radius: 200;" text="Modifier" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="aff_button" mnemonicParsing="false" onAction="#afficherCommande" prefHeight="30.0" prefWidth="82.0" style="-fx-background-color: #48ffc2; -fx-background-radius: 200;" text="afficher" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="14.0" layoutY="250.0" prefHeight="30.0" prefWidth="207.0" spacing="15.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="76.0" text="Prix total :" />
+                        <TextField fx:id="tfprix" promptText="Prix Total" style="-fx-background-color: #ffffff; -fx-border-color: #48ffc2;" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="12.0" layoutY="137.0" prefHeight="50.0" prefWidth="235.0" spacing="20.0">
+                     <children>
+                        <Label lineSpacing="10.0" text="id_produit" />
+                        <TextField fx:id="tfidproduit" prefHeight="25.0" prefWidth="152.0" promptText="id_produit" style="-fx-border-color: #48ffc2;" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="12.0" layoutY="306.0" prefHeight="50.0" prefWidth="235.0" spacing="5.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="68.0" text="id user: " />
+                        <TextField fx:id="tfiduser" promptText="id _user" style="-fx-border-color: #48ffc2;" />
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+      <Button layoutX="25.0" layoutY="180.0" mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="68.0" style="-fx-background-color: #48ffc2;" text="back" />
+      <Button layoutX="25.0" layoutY="226.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="68.0" style="-fx-background-color: #48ffc2;" text="logout" />
+   </children>
+</AnchorPane>

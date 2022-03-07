@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="980.0" styleClass="parent" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainController">
+   <children>
+      <Pane layoutY="163.0" prefHeight="354.0" prefWidth="980.0" styleClass="pane">
+         <children>
+            <ImageView fx:id="tfimagee" fitHeight="354.0" fitWidth="883.0" layoutX="112.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/cc.png" />
+               </image>
+               <styleClass>
+                  <String fx:value="back" />
+                  <String fx:value="pane" />
+               </styleClass>
+            </ImageView>
+            <Label layoutX="33.0" layoutY="59.0" prefHeight="35.0" prefWidth="274.0" text="create an account">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="118.0" layoutY="199.0" mnemonicParsing="false" onAction="#open_signup" prefHeight="35.0" prefWidth="167.0" styleClass="trans-btn-white-border" text="Sign Up">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="707.0" layoutY="59.0" prefHeight="35.0" prefWidth="222.0" text="connect" textFill="#48ffc2">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="726.0" layoutY="191.0" mnemonicParsing="false" onAction="#open_login" prefHeight="35.0" prefWidth="167.0" styleClass="trans-btn-white-border" text="Sign In">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button layoutX="893.0" layoutY="33.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="57.0" text="exit">
+         
+            </Button>
+            <VBox fx:id="vbox" layoutX="67.0" layoutY="-63.0" prefHeight="480.0" prefWidth="480.0" styleClass="white-pane" />
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@CSS.css" />
+      <URL value="@../../../../../Downloads/css.css" />
+      
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="631.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FXMLController">
+   <children>
+      <StackPane layoutX="159.0" prefHeight="478.0" prefWidth="472.0">
+         <children>
+            <Pane fx:id="pnFacture" prefHeight="482.0" prefWidth="479.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <TextField fx:id="tfsearch" layoutX="268.0" layoutY="23.0" promptText="Recherche" style="-fx-border-color: #64c3c2; -fx-border-radius: 200; -fx-background-radius: 200;" />
+                  <TableView fx:id="tvfacture" layoutX="101.0" layoutY="81.0" prefHeight="185.0" prefWidth="204.0">
+                    <columns>
+                      <TableColumn fx:id="coladresse" prefWidth="126.0" text="adresse_livraison" />
+                        <TableColumn fx:id="coltotal" prefWidth="73.0" text="total" />
+                    </columns>
+                  </TableView>
+                  <HBox layoutX="14.0" layoutY="308.0" prefHeight="45.0" prefWidth="161.0">
+                     <children>
+                        <VBox prefHeight="71.0" prefWidth="150.0">
+                           <children>
+                              <Label text="Adresse Livraison :" />
+                              <TextField fx:id="tfadresse" promptText="Adresse  livraison" style="-fx-background-color: #fff; -fx-border-color: #48ffc2;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="combofacture" layoutX="25.0" layoutY="387.0" prefHeight="63.0" prefWidth="139.0" spacing="30.0">
+                     <children>
+                        <VBox prefHeight="63.0" prefWidth="127.0">
+                           <children>
+                              <Label text="id_user" />
+                              <TextField fx:id="tfuser" prefHeight="25.0" prefWidth="140.0" promptText="id_user" style="-fx-background-color: #ffffff; -fx-border-color: #48ffc2;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="erreur" layoutX="309.0" layoutY="90.0" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #ffffff; -fx-border-color: #48ffc2;" />
+                  <VBox layoutX="257.0" layoutY="295.0" prefHeight="97.0" prefWidth="127.0">
+                     <children>
+                        <Label text="id_facture" />
+                        <TextField fx:id="tffacture" prefHeight="19.0" prefWidth="127.0" promptText="id_facture" style="-fx-background-color: #ffffff; -fx-border-color: #48ffc2;" />
+                        <Label text="Adresse Livraison :" />
+                        <TextField fx:id="tfadresse1" prefHeight="19.0" prefWidth="127.0" promptText="Adresse  livraison" style="-fx-background-color: #fff; -fx-border-color: #48ffc2;" />
+                     </children>
+                  </VBox>
+                  <Button layoutX="388.0" layoutY="330.0" mnemonicParsing="false" onAction="#btnModifier" prefHeight="27.0" prefWidth="69.0" style="-fx-background-color: #48ffc2; -fx-background-radius: 200;" text="Modifier" textFill="WHITE" />
+                  <Button layoutX="164.0" layoutY="405.0" mnemonicParsing="false" onAction="#btnSuprimer" prefHeight="27.0" prefWidth="79.0" style="-fx-background-color: #48ffc2; -fx-background-radius: 200;" text="Suprimer" textFill="WHITE" />
+                  <Button alignment="TOP_CENTER" layoutX="163.0" layoutY="326.0" mnemonicParsing="false" onAction="#btnAjouter" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: #48ffc2; -fx-background-radius: 200;" text="Ajouter" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+      <HBox layoutX="8.0" layoutY="114.0" prefHeight="57.0" prefWidth="139.0">
+         <children>
+            <Button fx:id="btnCommande" mnemonicParsing="false" onAction="#btnCommande" style="-fx-background-color: #48ffc2; -fx-background-radius: 200;" text="Commande" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="11.0" layoutY="197.0" prefHeight="77.0" prefWidth="139.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="119.0" style="-fx-background-color: #48ffc2; -fx-background-radius: 200;" text="Facture" textFill="#f5f0f0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="11.0" layoutY="284.0" prefHeight="77.0" prefWidth="117.0">
+         <children>
+            <Button fx:id="btnretour" mnemonicParsing="false" onAction="#back" prefHeight="39.0" prefWidth="106.0" style="-fx-background-color: #48ffc2; -fx-background-radius: 200;" text="Retour" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

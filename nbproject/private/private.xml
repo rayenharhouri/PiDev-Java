@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/gui/LoginController.java</file>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/gui/NewpasswordController.java</file>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/gui/FirstFXML.fxml</file>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/gui/MainController.java</file>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/gui/affichage.fxml</file>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/gui/profil.fxml</file>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/gui/affichagecontroller.java</file>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/gui/css.css</file>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/gui/profilcontroller.java</file>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/model/Utilisateur.java</file>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/gui/InscrireController.java</file>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/projet_melek_boussif/Projet_melek_boussif.java</file>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/gui/inscrire.fxml</file>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/gui/CodeController.java</file>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/service/EquipeService.java</file>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/service/UtilisateurService.java</file>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/gui/newMainFX.java</file>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/util/mail.java</file>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/interfaces/IutilisateurService.java</file>
+            <file>file:/C:/Users/melek/Documents/NetBeansProjects/projet_melek_boussif/src/interfaces/IequipeService.java</file>
+        </group>
+    </open-files>
+</project-private>

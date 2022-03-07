@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="tfpasswod" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="480.0" styleClass="blue-panel" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.InscrireController">
+   <children>
+      <Label contentDisplay="TEXT_ONLY" prefHeight="38.0" prefWidth="101.0" styleClass="tf" text="Sign Up" textFill="RED">
+         <VBox.margin>
+            <Insets bottom="10.0" left="200.0" top="15.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="34.0" prefWidth="450.0">
+         <children>
+            <TextField fx:id="tfnom" prefHeight="26.0" prefWidth="481.0" promptText="First name" styleClass="tf_box" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></TextField>
+          
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="32.0" prefWidth="450.0">
+         <children>
+            <TextField fx:id="tfprenom" prefHeight="26.0" prefWidth="481.0" promptText="Last name" styleClass="tf_box" />
+            
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="6.0" prefWidth="480.0" />
+      <HBox prefHeight="34.0" prefWidth="450.0">
+         <children>
+            <TextField fx:id="tfusername" prefHeight="26.0" prefWidth="481.0" promptText="username" styleClass="tf_box" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets top="-10.0" />
+               </HBox.margin></TextField>
+            
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="34.0" prefWidth="450.0">
+         <children>
+            <TextField fx:id="tfemail" prefHeight="26.0" prefWidth="481.0" promptText="email" styleClass="tf_box" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets left="15.0" right="15.0" top="10.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox prefHeight="34.0" prefWidth="450.0">
+         <children>
+            <PasswordField fx:id="tfpass" prefHeight="31.0" prefWidth="450.0" promptText="Password" styleClass="tf_box">
+               <HBox.margin>
+                  <Insets top="-8.0" />
+               </HBox.margin></PasswordField>
+           
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="34.0" prefWidth="450.0">
+         <children>
+            <TextField fx:id="tfbestgame" prefHeight="26.0" prefWidth="481.0" promptText="best_game" styleClass="tf_box" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets top="-4.0" />
+               </HBox.margin></TextField>
+            
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="34.0" prefWidth="450.0">
+         <children>
+            <TextField fx:id="tfequipe" prefHeight="26.0" prefWidth="481.0" promptText="equipe" styleClass="tf_box" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets top="-4.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="L_contenu" prefHeight="26.0" prefWidth="523.0" />
+           
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="34.0" prefWidth="450.0">
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="20.0" />
+         </VBox.margin>
+         <children>
+            <Button mnemonicParsing="false" onAction="#select" prefHeight="18.0" prefWidth="147.0" style="-fx-background-color: #48ffc2;" styleClass="blue-btn" text="select image">
+               <font>
+                  <Font name="Algerian" size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="300.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#inscrire" prefHeight="38.0" prefWidth="214.0" style="-fx-background-color: #48ffc2;" styleClass="blue-btn" text="Sign Up">
+         <font>
+            <Font name="Algerian" size="17.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="-30.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+   <stylesheets>
+      <URL value="@CSS.css" />
+      <URL value="@../../../../../Downloads/css.css" />
+   </stylesheets>
+</VBox>

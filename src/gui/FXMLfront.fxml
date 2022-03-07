@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #48ffc2;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="gui.FXMLfrontController">
+   <children>
+      <VBox layoutX="315.0" layoutY="58.0" prefHeight="219.0" prefWidth="126.0" spacing="30.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <TextField fx:id="tfquantite" promptText="Quantité" style="-fx-border-color: #48ffc2;" />
+            <TextField fx:id="tfprix" promptText="Prix Total" style="-fx-border-color: #48ffc2;" />
+            <TextField fx:id="tfidproduit" promptText="id_produit" style="-fx-border-color: #48ffc2;" />
+            <TextField fx:id="tfiduser" promptText="id_user" style="-fx-border-color: #48ffc2;" />
+         </children>
+      </VBox>
+      <VBox layoutX="171.0" layoutY="58.0" prefHeight="219.0" prefWidth="135.0" spacing="40.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label prefHeight="17.0" prefWidth="89.0" text="Quantité  :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Prix Total :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Id Produit    :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Id User    :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Button layoutX="109.0" layoutY="318.0" mnemonicParsing="false" onAction="#btnAjouter" prefHeight="25.0" prefWidth="142.0" text="Ajouter Commande" />
+   </children>
+</AnchorPane>
